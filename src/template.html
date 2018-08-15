@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h1>Fill in this form to add a Student</h1>
+      <br />
+
+      <form method="post" onsubmit="#">
+        <p>
+          <label>Student's Name:</label>
+          <input type="text" required v-model="name"/>
+        </p>
+        <p>
+          <label>Date of Birth: </label>
+          <input type="date" v-model="birthDay"/>
+        </p>
+        <p>
+          <label>Age: </label>
+        </p>
+        <p>
+          <label>Sex: </label>
+          Male: <input type="radio" name="sex" value="Male" v-model="sex"/>
+          Female: <input type="radio" name="sex" value="Female" v-model="sex"/>
+        </p>
+        <p>
+          <label>Class: </label>
+          <select name="classes">
+            <option>
+              {{given value}}
+            </option>
+          </select>
+        </p>
+        <p><input type="submit" value="Save" onclick=""/> <input type="reset" value="Clear"/></p>
+      </form>
+      
+    </div>
+  </body>
+</html>
