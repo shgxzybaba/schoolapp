@@ -45,7 +45,7 @@ export default{
       console.log(response.data);
       // this.Classrooms = classrooms;
       self.Classrooms = response.data;
-      console.log(this.Classrooms);
+      // console.log(this.Classrooms);
     });
   },
   computed:{

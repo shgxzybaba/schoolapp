@@ -4,6 +4,7 @@
   <router-link to="/studentForm"><button type="button">Add Student</button></router-link>
   <router-link to="/"><button type="button" >Classrooms</button></router-link>
   <router-link to="/courseForm"><button type="button">Add Course</button></router-link>
+  
   <!-- <keep-alive> -->
   <!-- <component v-bind:is="givenComponent"
   v-bind:Classrooms="Classrooms"
@@ -19,8 +20,8 @@
 <script>
 import Heading from './components/Heading.vue'
 import Footing from './components/Footing.vue'
-import Body from './components/Body.vue'
-import Classes from './components/Data.vue'
+// import Body from './components/Classes.vue'
+import Classes from './components/Classes.vue'
 import Form from './components/StudentForm.vue'
 import Classroom from './components/Classroom.vue'
 // import courseForm from './components/CourseData.vue'
@@ -38,11 +39,11 @@ export default {
   methods:{
 
   },
-  
+
   components:{
     'app-header': Heading,
     'app-footer': Footing,
-    'app-body': Body,
+
     'classes-body': Classes,
     'student-form':Form,
     'selected-classroom': Classroom,
