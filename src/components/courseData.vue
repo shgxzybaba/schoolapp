@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="courseForm">
+<<<<<<< HEAD
     <course-list v-bind:courses="courses"></course-list>
     <span v-show="success" class="success">{{courseName}} added!</span>
     <div class="" v-show="showForm">
@@ -34,6 +35,34 @@
       </form>
     </div>
 
+=======
+    <h1>Enter new course details here</h1>
+
+    <form class="form" onsubmit="#" method="post">
+      <div>
+        <label for="courseName">Course Name:</label> &nbsp; &nbsp; &nbsp; 
+        <input type="text" name="courseName" v-model="courseName" placeholder="Biology"
+         ref="courseName" @blur="validateCourseName" @focus="nameExists =nameExists">
+         <!-- this is a warning sign -->
+        <span v-show="nameExists" class="error">{{courseName}} already exists!!</span>
+      </div>
+      <div>
+        <label for="courseDesc">Description:</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <!--  -->
+        <input type="text" v-model="courseDesc" rows="8" cols="80">
+
+      </div>
+      <div>
+        <!--dope styling needed here  -->
+        <label>Faculties:</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+          Arts: <input type="checkbox" v-model="selectedFaculties" value="ARTS">
+          Science: <input type="checkbox" v-model="selectedFaculties" value="SCIENCE">
+          Commerce: <input type="checkbox" v-model="selectedFaculties" value="COMMERCIAL">
+          <!-- <button type="button" name="button" @click="logNames">dummy</button> -->
+      </div>
+      <div><input type="submit" value="Save" v-on:click.prevent="post"/> <input type="reset" value="Clear"/></div>
+    </form>
+>>>>>>> 8ca4510947be000f03e8d09e18064bbb2422d976
 
   </div>
 </template>
@@ -137,20 +166,73 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 .error{
   color: red;
 }
 .courseForm{
-  margin-left: auto;
-  text-align: center;
-  font-family: sans-serif;
+   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -20px;
+}
+h1{
+  font-family: montserrat;
+  font-weight: 500;
+}
+form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #ccc;
+  padding: 60px 100px 40px 100px;
+  height: auto;
+
+}
+div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
 }
 label{
   font-weight: bold;
+  font-family: raleway;
 }
+input[type = text]{
+  outline: none;
+  height: 30px;
+  width: 215px;
+  color: grey;
+}
+<<<<<<< HEAD
 .success{
   font-weight: bold;
   color: green;
 }
+=======
+input[type = submit]{
+    background: #025837;
+    outline: none;
+    padding: 10px 20px;
+    border: none;
+    font-family: raleway;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+ }
+ input[type = reset]{
+    background: #1a011a;
+    outline: none;
+    padding: 10px 20px;
+    border: none;
+    font-family: raleway;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+ }
+>>>>>>> 8ca4510947be000f03e8d09e18064bbb2422d976
 
 </style>

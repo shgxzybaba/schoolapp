@@ -1,10 +1,16 @@
 <template>
   <div id="app">
   <app-header></app-header>
+<<<<<<< HEAD
   <router-link to="/studentForm"><button type="button">Add Student</button></router-link>
   <router-link to="/"><button type="button" >Classrooms</button></router-link>
   <router-link to="/courseForm"><button type="button">Add Course</button></router-link>
   
+=======
+  <router-link to="/studentForm"><button type="button" class="add">Add Student</button></router-link>
+  <router-link to="/"><button type="button" class="class" >Classrooms</button></router-link>
+  <router-link to="/courseForm"><button type="button" class="course">Add Course</button></router-link>
+>>>>>>> 8ca4510947be000f03e8d09e18064bbb2422d976
   <!-- <keep-alive> -->
   <!-- <component v-bind:is="givenComponent"
   v-bind:Classrooms="Classrooms"
@@ -62,13 +68,21 @@ export default {
 </script>
 
 <style scoped>
+
+#app {
+  margin: 0;
+  padding: 0;
+}
+
 h1{
 
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: purple;
+  background-color: #1a011a;
   font-family: serif;
+  font-size: 24px;
+  font-family: raleway;
 }
 p{
 
@@ -77,6 +91,36 @@ p{
   padding-right: 10px;
   background-color: purple;
   font-family: serif;
+}
+button {
+
+   border: none;
+   color: #fff;
+   padding: 10px 15px;
+   cursor: pointer;
+   font-family: raleway;
+   margin-top: 10px;
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.678);
+}
+button:hover{
+  box-shadow: none;
+}
+.add{
+
+  background: #025837;
+ 
+
+}
+
+.class {
+
+  background: #1a011a;
+}
+
+.course{
+
+  background: #002e4d;
+
 }
 
 </style>
